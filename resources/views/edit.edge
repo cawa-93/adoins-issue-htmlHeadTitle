@@ -1,0 +1,10 @@
+@layout('layout')
+@set('editURL', new URL(editLink.url))
+@set('editURLWithoutProtocol', editURL.host + editURL.pathname)
+@set('title', 'Edit ' + (editURLWithoutProtocol ? editURLWithoutProtocol : ''))
+@set('headerTitle', 'This should be clickable link - ' + (editURLWithoutProtocol ? `<a href="${editLink.url}" target="_blank">${editURLWithoutProtocol}</a>` : ''))
+
+
+@section('body')
+Edit page content
+@end
